@@ -1,2 +1,2 @@
-![# DB_design](./doc/DB_design.md)
+# ![Database design](./doc/DB_design.md)
 

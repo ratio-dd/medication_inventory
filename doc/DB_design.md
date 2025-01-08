@@ -1,6 +1,7 @@
-![Diagram](https://raw.githubusercontent.com/ratio-dd/medication_inventory/main/design_UML/first_design/first_design.svg)
 
 # DataBase design
+
+![Diagram](https://raw.githubusercontent.com/ratio-dd/medication_inventory/main/design_UML/first_design/first_design.svg)
 
 ## medication table
 - med_id: PK,show unique ID of each medication
