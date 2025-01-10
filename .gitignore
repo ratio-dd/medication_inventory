@@ -33,3 +33,5 @@ build/
 .vscode/
 
 *.drawio.bkp
+
+application.properties
