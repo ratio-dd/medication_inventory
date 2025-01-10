@@ -27,7 +27,7 @@
 - med_id: Foreign key from medication table. 1 to 1
 - remaining_quantity: quantity count in minimal unit. e.g. 50 tablet
 - location: as name. May have a unique location *Fridge*
-- unit_type: don't have idea of whether I use this column or not. Need futher design
+- unit_type: don't have idea of whether I use this column or not. Need further design
 
 ## med_schedule
 - schedule_id: PK
