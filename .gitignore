@@ -34,4 +34,4 @@ build/
 
 *.drawio.bkp
 
-config.properties
+db_config.properties
