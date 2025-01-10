@@ -16,10 +16,10 @@
 - place_of_origin: Key is to store whether is domestic or imported
 - effects: as name
 - manufacture_date: date type
-- expiry_date: expiry date. **Important colunm**
+- expiry_date: expiry date. **Important column**
 - barcode: Product barcode
 - trace_code: for safety trace back usage
-- batch_number: optional colunm
+- batch_number: optional column
 - memo
 
 ## inventory
@@ -27,7 +27,7 @@
 - med_id: Foreign key from medication table. 1 to 1
 - remaining_quantity: quantity count in minimal unit. e.g. 50 tablet
 - location: as name. May have a unique location *Fridge*
-- unit_type: don't have idea of whether use this colunm or not. Need futher design
+- unit_type: don't have idea of whether I use this column or not. Need futher design
 
 ## med_schedule
 - schedule_id: PK
@@ -43,12 +43,12 @@
 - age
 - gender
 - memo
-- [ ] Futher may have user's illness for better user profile
+- [ ] Further may have user's illness for better user profile
 
 ## med_intake_status
 - intake_id: PK
 - schedule_id: FK with schedule table
-- user_id: FK wihe user table
+- user_id: FK with user table
 - time: accurate time. Update with user/auto function
 - status: penning, finished, missed may show in different color in user interface
 - memo
