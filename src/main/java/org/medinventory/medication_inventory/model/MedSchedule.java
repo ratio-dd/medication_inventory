@@ -26,7 +26,7 @@ public class MedSchedule {
     private Float dosage;
 
     @Column(name = "time_of_day", nullable = false, length = Integer.MAX_VALUE)
-    private String time_of_day;
+    private String timeOfDay;
 
     @Column(name = "memo", length = Integer.MAX_VALUE)
     private String memo;
@@ -66,12 +66,12 @@ public class MedSchedule {
         this.dosage = dosage;
     }
 
-    public String getTime_of_day() {
-        return time_of_day;
+    public String getTimeOfDay() {
+        return timeOfDay;
     }
 
-    public void setTime_of_day(String time_of_day) {
-        this.time_of_day = time_of_day;
+    public void setTimeOfDay(String time_of_day) {
+        this.timeOfDay = time_of_day;
     }
 
     public String getMemo() {
@@ -88,6 +88,61 @@ public class MedSchedule {
 
     public void setMedIntakeStatuses(Set<MedIntakeStatus> medIntakeStatuses) {
         this.medIntakeStatuses = medIntakeStatuses;
+    }
+
+    protected MedSchedule() {
+    }
+
+    public MedSchedule(User user, Medication med, Float dosage, String time_of_day, String memo) {
+        this.user = user;
+        this.med = med;
+        this.dosage = dosage;
+        this.timeOfDay = time_of_day;
+        this.memo = memo;
+    }
+
+    public static class Builder {
+        private User user;
+        private Medication med;
+        private Float dosage;
+        private String timeOfDay;
+        private String memo;
+
+        public Builder user(User user) {
+            this.user = user;
+            return this;
+        }
+
+        public Builder med(Medication med) {
+            this.med = med;
+            return this;
+        }
+
+        public Builder dosage(Float dosage) {
+            this.dosage = dosage;
+            return this;
+        }
+
+        public Builder time_of_day(String timeOfDay) {
+            this.timeOfDay = timeOfDay;
+            return this;
+        }
+
+        public Builder memo(String memo) {
+            this.memo = memo;
+            return this;
+        }
+
+        public MedSchedule build() {
+            return new MedSchedule(user, med, dosage, timeOfDay, memo);
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        protected Builder() {
+        }
     }
 
 }

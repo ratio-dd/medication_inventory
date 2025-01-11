@@ -78,4 +78,62 @@ public class MedIntakeStatus {
         this.memo = memo;
     }
 
+    protected MedIntakeStatus() {
+    }
+
+    public MedIntakeStatus(MedSchedule schedule, User user, LocalTime time, String status, String memo) {
+        this.schedule = schedule;
+        this.user = user;
+        this.time = time;
+        this.status = status;
+        this.memo = memo;
+    }
+
+    public static class Builder {
+        private MedSchedule schedule;
+        private User user;
+        private LocalTime time;
+        private String status;
+        private String memo;
+
+        protected Builder() {
+        }
+
+        public Builder schedule(MedSchedule schedule) {
+            this.schedule = schedule;
+            return this;
+        }
+
+        public Builder user(User user) {
+            this.user = user;
+            return this;
+        }
+
+        public Builder time(LocalTime time) {
+            this.time = time;
+            return this;
+        }
+
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public Builder memo(String memo) {
+            this.memo = memo;
+            return this;
+        }
+
+        public MedIntakeStatus build() {
+            return new MedIntakeStatus(schedule, user, time, status, memo);
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public String toString() {
+            return "MedIntakeStatus.Builder(schedule=" + this.schedule + ", user=" + this.user + ", time=" + this.time + ", status=" + this.status + ", memo=" + this.memo + ")";
+        }
+    }
 }

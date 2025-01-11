@@ -16,13 +16,13 @@ public class Inventory {
     private Medication med;
 
     @Column(name = "remaining_quantity")
-    private Short remaining_quantity;
+    private Short remainingQuantity;
 
     @Column(name = "location", length = Integer.MAX_VALUE)
     private String location;
 
     @Column(name = "unit_type", length = Integer.MAX_VALUE)
-    private String unit_type;
+    private String unitType;
 
     public Integer getId() {
         return id;
@@ -40,12 +40,12 @@ public class Inventory {
         this.med = med;
     }
 
-    public Short getRemaining_quantity() {
-        return remaining_quantity;
+    public Short getRemainingQuantity() {
+        return remainingQuantity;
     }
 
-    public void setRemaining_quantity(Short remaining_quantity) {
-        this.remaining_quantity = remaining_quantity;
+    public void setRemainingQuantity(Short remaining_quantity) {
+        this.remainingQuantity = remaining_quantity;
     }
 
     public String getLocation() {
@@ -56,12 +56,50 @@ public class Inventory {
         this.location = location;
     }
 
-    public String getUnit_type() {
-        return unit_type;
+    public String getUnitType() {
+        return unitType;
     }
 
-    public void setUnit_type(String unit_type) {
-        this.unit_type = unit_type;
+    public void setUnitType(String unit_type) {
+        this.unitType = unit_type;
     }
 
+    protected Inventory() {
+    }
+
+    public Inventory(Medication med, Short remaining_quantity, String location, String unit_type) {
+        this.med = med;
+        this.remainingQuantity = remaining_quantity;
+        this.location = location;
+        this.unitType = unit_type;
+    }
+    public static class Builder {
+        private Medication med;
+        private Short remainingQuantity;
+        private String location;
+        private String unitType;
+        public Builder med(Medication med) {
+            this.med = med;
+            return this;
+        }
+        public Builder remainingQuantity(Short remainingQuantity) {
+            this.remainingQuantity = remainingQuantity;
+            return this;
+        }
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
+        public Builder unitType(String unitType) {
+            this.unitType = unitType;
+            return this;
+        }
+        public Inventory build() {
+            return new Inventory(med, remainingQuantity, location, unitType);
+        }
+        public static Builder builder() {
+            return new Builder();
+        }
+
+    }
 }
