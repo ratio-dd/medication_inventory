@@ -1,6 +1,7 @@
-package org.medinventory.medication_inventory.model;
+package org.medinventory.medication_inventory.inventory;
 
 import jakarta.persistence.*;
+import org.medinventory.medication_inventory.medication.Medication;
 
 @Entity
 @Table(name = "inventory")

@@ -1,6 +1,8 @@
-package org.medinventory.medication_inventory.model;
+package org.medinventory.medication_inventory.medintakestatus;
 
 import jakarta.persistence.*;
+import org.medinventory.medication_inventory.medschedule.MedSchedule;
+import org.medinventory.medication_inventory.user.User;
 
 import java.time.LocalTime;
 

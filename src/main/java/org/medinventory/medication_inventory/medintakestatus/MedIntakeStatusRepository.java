@@ -1,6 +1,5 @@
-package org.medinventory.medication_inventory.repository;
+package org.medinventory.medication_inventory.medintakestatus;
 
-import org.medinventory.medication_inventory.model.MedIntakeStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

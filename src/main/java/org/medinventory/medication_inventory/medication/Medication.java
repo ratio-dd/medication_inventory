@@ -1,7 +1,9 @@
-package org.medinventory.medication_inventory.model;
+package org.medinventory.medication_inventory.medication;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.Comment;
+import org.medinventory.medication_inventory.inventory.Inventory;
+import org.medinventory.medication_inventory.medschedule.MedSchedule;
 
 import java.time.LocalDate;
 import java.util.LinkedHashSet;

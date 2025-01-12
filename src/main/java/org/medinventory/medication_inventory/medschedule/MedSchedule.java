@@ -1,6 +1,9 @@
-package org.medinventory.medication_inventory.model;
+package org.medinventory.medication_inventory.medschedule;
 
 import jakarta.persistence.*;
+import org.medinventory.medication_inventory.medication.Medication;
+import org.medinventory.medication_inventory.medintakestatus.MedIntakeStatus;
+import org.medinventory.medication_inventory.user.User;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

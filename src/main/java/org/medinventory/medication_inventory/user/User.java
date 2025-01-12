@@ -1,4 +1,4 @@
-package org.medinventory.medication_inventory.model;
+package org.medinventory.medication_inventory.user;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.Comment;
