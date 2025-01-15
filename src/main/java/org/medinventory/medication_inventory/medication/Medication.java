@@ -310,6 +310,14 @@ public class Medication {
             return this;
         }
 
+        public Builder dose(Integer dose) {
+            if (dose != null && dose > Short.MAX_VALUE) {
+                throw new IllegalArgumentException("Dose value exceeds Short.MAX_VALUE");
+            }
+            this.dose = dose.shortValue();
+            return this;
+        }
+
         public Builder formulation(String formulation) {
             this.formulation = formulation;
             return this;
@@ -366,4 +374,29 @@ public class Medication {
         }
 
     }
+
+    @Override
+    public String toString() {
+        return "Medication{" +
+                "id=" + id +
+                ", product_name='" + product_name + '\'' +
+                ", generic_name='" + generic_name + '\'' +
+                ", commonName='" + commonName + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", purchase_method='" + purchase_method + '\'' +
+                ", specification='" + specification + '\'' +
+                ", dose=" + dose +
+                ", formulation='" + formulation + '\'' +
+                ", place_of_origin='" + place_of_origin + '\'' +
+                ", effects='" + effects + '\'' +
+                ", manufacture_date=" + manufacture_date +
+                ", expiry_date=" + expiry_date +
+                ", barcode=" + barcode +
+                ", trace_code='" + trace_code + '\'' +
+                ", batch_number=" + batch_number +
+                ", memo='" + memo + '\'' +
+                '}';
+    }
+
+
 }
