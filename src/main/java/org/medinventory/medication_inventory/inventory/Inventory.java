@@ -1,5 +1,6 @@
 package org.medinventory.medication_inventory.inventory;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.medinventory.medication_inventory.medication.Medication;
 
@@ -14,6 +15,7 @@ public class Inventory {
 
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "med_id", nullable = false)
+    @JsonIgnore
     private Medication med;
 
     @Column(name = "remaining_quantity")
