@@ -3,6 +3,7 @@ package org.medinventory.medication_inventory.medication;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 
 import java.time.LocalDate;
 
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 public class MedicationConfig {
 
     @Bean
+    @Order(1)
     CommandLineRunner commandLineRunner(MedicationRepository repository) {
         return args -> {
             repository.save(new Medication.Builder()
