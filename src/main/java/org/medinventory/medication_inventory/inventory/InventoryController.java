@@ -16,7 +16,6 @@ public class InventoryController {
 
     @PostMapping(path = "/{medId}/add")
     public ResponseEntity<Inventory> addInventoryToMedication(@PathVariable("medId") Integer medId, @RequestBody Inventory inventory) {
-//        Inventory inventory1 = inventoryService.addInventoryToMedication(medId, inventory);
         return inventoryService.addInventoryToMedication(medId, inventory)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

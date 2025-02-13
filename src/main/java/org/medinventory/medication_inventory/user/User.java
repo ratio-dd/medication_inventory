@@ -24,6 +24,9 @@ public class User {
     @Column(name = "memo", length = Integer.MAX_VALUE)
     private String memo;
 
+
+    // Getters and Setters
+
     public String getMemo() {
         return memo;
     }
@@ -40,7 +43,6 @@ public class User {
         this.gender = gender;
     }
 
-    // Getters and Setters
 
     public Integer getId() {
         return id;

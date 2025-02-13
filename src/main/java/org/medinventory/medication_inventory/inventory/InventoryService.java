@@ -24,10 +24,6 @@ public class InventoryService {
 
     //TODO: Check if need to rewrite the function
     public Optional<Inventory> addInventoryToMedication(Integer medId, Inventory inventory) {
-//        Medication med = medicationRepository.findById(medId)
-//                .orElseThrow(() -> new RuntimeException("Medication not found"));
-//        inventory.setMed(med);
-//        return inventoryRepository.save(inventory);
         return medicationRepository.findById(medId).map(med -> {
             inventory.setMed(med);
             return inventoryRepository.save(inventory);

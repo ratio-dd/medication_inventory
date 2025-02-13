@@ -35,3 +35,8 @@ build/
 *.drawio.bkp
 
 db_config.properties
+
+frontend/
+src/main/resources/template/
+
+.gitignore
